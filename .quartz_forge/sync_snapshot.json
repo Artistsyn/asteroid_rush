@@ -1,0 +1,810 @@
+{
+  "generated_at_utc": "2026-06-07T01:00:19.495305200+00:00",
+  "manifest_hash": 17613491918743546714,
+  "manifest": {
+    "format_version": 1,
+    "project_name": "Asteroid Rush",
+    "created_utc": "2026-06-05T02:20:52.084555+00:00",
+    "last_saved_utc": "2026-06-07T01:00:19.464852100+00:00",
+    "next_scene_id": 2,
+    "next_object_id": 1,
+    "next_logic_tree_id": 4,
+    "next_event_id": 19,
+    "next_custom_code_id": 2,
+    "active_scene_id": "scene_0001",
+    "scenes": [
+      {
+        "id": "scene_0001",
+        "name": "main_scene",
+        "kind": "Game",
+        "source_file": "src/scenes/main_scene.rs",
+        "notes": "",
+        "canvas": {
+          "virtual_width": 3840.0,
+          "virtual_height": 2160.0,
+          "zoom": 1.0,
+          "pan_x": 0.0,
+          "pan_y": 0.0,
+          "show_grid": true,
+          "snap_to_grid": false,
+          "show_camera_frame": true,
+          "camera_x": 0.0,
+          "camera_y": 0.0,
+          "camera_width": 3840.0,
+          "camera_height": 2160.0,
+          "camera_size_customized": false,
+          "show_background_cells": false,
+          "orientation": "Landscape",
+          "snap_background_objects_to_cells": false
+        },
+        "objects": [
+          {
+            "id": "bg",
+            "name": "bg",
+            "output_file": "src/scenes/main_scene.rs",
+            "visual_asset_mode": "None",
+            "visual_asset_path": "",
+            "visual_asset_fps": 12.0,
+            "visual_asset_use_canvas_cache": true,
+            "visual_asset_cache_key": "",
+            "visual_asset_size_aware_cache": true,
+            "template": "Rectangle",
+            "x": 0.0,
+            "y": 0.0,
+            "w": 0.0,
+            "h": 0.0,
+            "tags": [],
+            "layer": -10,
+            "color_rgb": [
+              255,
+              255,
+              255
+            ],
+            "enabled": true,
+            "lock_transform": false,
+            "is_background": false,
+            "spawn_only": false,
+            "advanced": {
+              "momentum_x": 0.0,
+              "momentum_y": 0.0,
+              "resistance_x": 0.0,
+              "resistance_y": 0.0,
+              "gravity": 0.0,
+              "rotation_deg": 0.0,
+              "pivot_x": 0.5,
+              "pivot_y": 0.5,
+              "material": {
+                "preset": "Default",
+                "elasticity": 0.0,
+                "friction": 0.5,
+                "density": 1.0
+              },
+              "collision_layer": 1,
+              "collision_mask": 1,
+              "slope_enabled": false,
+              "slope_left_offset": 0.0,
+              "slope_right_offset": 0.0,
+              "slope_auto_rotation": false,
+              "one_way": false,
+              "surface_velocity_enabled": false,
+              "surface_velocity_x": 0.0,
+              "surface_normal_enabled": false,
+              "surface_normal_x": 0.0,
+              "surface_normal_y": -1.0,
+              "align_to_slope": false,
+              "align_to_slope_speed": 8.0,
+              "planet_enabled": false,
+              "planet_radius": 0.0,
+              "gravity_target_enabled": false,
+              "gravity_target_tag": "",
+              "gravity_strength": 1.0,
+              "gravity_influence_mult": 3.0,
+              "gravity_falloff": "Linear",
+              "gravity_all_sources": false,
+              "gravity_identity_enabled": false,
+              "gravity_identity": "",
+              "auto_align": false,
+              "auto_align_speed": 10.0,
+              "ignore_zoom": true,
+              "screen_space": true
+            },
+            "visible": {
+              "transform": true,
+              "physics": false,
+              "collision": false,
+              "slope": false,
+              "planetary": false,
+              "camera_space": false
+            }
+          },
+          {
+            "id": "hud_lives",
+            "name": "hud_lives",
+            "output_file": "src/scenes/main_scene.rs",
+            "visual_asset_mode": "None",
+            "visual_asset_path": "",
+            "visual_asset_fps": 12.0,
+            "visual_asset_use_canvas_cache": true,
+            "visual_asset_cache_key": "",
+            "visual_asset_size_aware_cache": true,
+            "template": "Rectangle",
+            "x": 20.0,
+            "y": 86.0,
+            "w": 480.0,
+            "h": 58.0,
+            "tags": [
+              "hud"
+            ],
+            "layer": 12,
+            "color_rgb": [
+              255,
+              255,
+              255
+            ],
+            "enabled": true,
+            "lock_transform": false,
+            "is_background": false,
+            "spawn_only": false,
+            "advanced": {
+              "momentum_x": 0.0,
+              "momentum_y": 0.0,
+              "resistance_x": 0.0,
+              "resistance_y": 0.0,
+              "gravity": 0.0,
+              "rotation_deg": 0.0,
+              "pivot_x": 0.5,
+              "pivot_y": 0.5,
+              "material": {
+                "preset": "Default",
+                "elasticity": 0.0,
+                "friction": 0.5,
+                "density": 1.0
+              },
+              "collision_layer": 1,
+              "collision_mask": 1,
+              "slope_enabled": false,
+              "slope_left_offset": 0.0,
+              "slope_right_offset": 0.0,
+              "slope_auto_rotation": false,
+              "one_way": false,
+              "surface_velocity_enabled": false,
+              "surface_velocity_x": 0.0,
+              "surface_normal_enabled": false,
+              "surface_normal_x": 0.0,
+              "surface_normal_y": -1.0,
+              "align_to_slope": false,
+              "align_to_slope_speed": 8.0,
+              "planet_enabled": false,
+              "planet_radius": 0.0,
+              "gravity_target_enabled": false,
+              "gravity_target_tag": "",
+              "gravity_strength": 1.0,
+              "gravity_influence_mult": 3.0,
+              "gravity_falloff": "Linear",
+              "gravity_all_sources": false,
+              "gravity_identity_enabled": false,
+              "gravity_identity": "",
+              "auto_align": false,
+              "auto_align_speed": 10.0,
+              "ignore_zoom": true,
+              "screen_space": true
+            },
+            "visible": {
+              "transform": true,
+              "physics": false,
+              "collision": false,
+              "slope": false,
+              "planetary": false,
+              "camera_space": false
+            }
+          },
+          {
+            "id": "hud_score",
+            "name": "hud_score",
+            "output_file": "src/scenes/main_scene.rs",
+            "visual_asset_mode": "None",
+            "visual_asset_path": "",
+            "visual_asset_fps": 12.0,
+            "visual_asset_use_canvas_cache": true,
+            "visual_asset_cache_key": "",
+            "visual_asset_size_aware_cache": true,
+            "template": "Rectangle",
+            "x": 20.0,
+            "y": 20.0,
+            "w": 540.0,
+            "h": 58.0,
+            "tags": [
+              "hud"
+            ],
+            "layer": 12,
+            "color_rgb": [
+              255,
+              255,
+              255
+            ],
+            "enabled": true,
+            "lock_transform": false,
+            "is_background": false,
+            "spawn_only": false,
+            "advanced": {
+              "momentum_x": 0.0,
+              "momentum_y": 0.0,
+              "resistance_x": 0.0,
+              "resistance_y": 0.0,
+              "gravity": 0.0,
+              "rotation_deg": 0.0,
+              "pivot_x": 0.5,
+              "pivot_y": 0.5,
+              "material": {
+                "preset": "Default",
+                "elasticity": 0.0,
+                "friction": 0.5,
+                "density": 1.0
+              },
+              "collision_layer": 1,
+              "collision_mask": 1,
+              "slope_enabled": false,
+              "slope_left_offset": 0.0,
+              "slope_right_offset": 0.0,
+              "slope_auto_rotation": false,
+              "one_way": false,
+              "surface_velocity_enabled": false,
+              "surface_velocity_x": 0.0,
+              "surface_normal_enabled": false,
+              "surface_normal_x": 0.0,
+              "surface_normal_y": -1.0,
+              "align_to_slope": false,
+              "align_to_slope_speed": 8.0,
+              "planet_enabled": false,
+              "planet_radius": 0.0,
+              "gravity_target_enabled": false,
+              "gravity_target_tag": "",
+              "gravity_strength": 1.0,
+              "gravity_influence_mult": 3.0,
+              "gravity_falloff": "Linear",
+              "gravity_all_sources": false,
+              "gravity_identity_enabled": false,
+              "gravity_identity": "",
+              "auto_align": false,
+              "auto_align_speed": 10.0,
+              "ignore_zoom": true,
+              "screen_space": true
+            },
+            "visible": {
+              "transform": true,
+              "physics": false,
+              "collision": false,
+              "slope": false,
+              "planetary": false,
+              "camera_space": false
+            }
+          },
+          {
+            "id": "game_over_overlay",
+            "name": "game_over_overlay",
+            "output_file": "src/scenes/main_scene.rs",
+            "visual_asset_mode": "None",
+            "visual_asset_path": "",
+            "visual_asset_fps": 12.0,
+            "visual_asset_use_canvas_cache": true,
+            "visual_asset_cache_key": "",
+            "visual_asset_size_aware_cache": true,
+            "template": "Rectangle",
+            "x": 400.0,
+            "y": 300.0,
+            "w": 1300.0,
+            "h": 120.0,
+            "tags": [
+              "overlay"
+            ],
+            "layer": 30,
+            "color_rgb": [
+              255,
+              255,
+              255
+            ],
+            "enabled": true,
+            "lock_transform": false,
+            "is_background": false,
+            "spawn_only": false,
+            "advanced": {
+              "momentum_x": 0.0,
+              "momentum_y": 0.0,
+              "resistance_x": 0.0,
+              "resistance_y": 0.0,
+              "gravity": 0.0,
+              "rotation_deg": 0.0,
+              "pivot_x": 0.5,
+              "pivot_y": 0.5,
+              "material": {
+                "preset": "Default",
+                "elasticity": 0.0,
+                "friction": 0.5,
+                "density": 1.0
+              },
+              "collision_layer": 1,
+              "collision_mask": 1,
+              "slope_enabled": false,
+              "slope_left_offset": 0.0,
+              "slope_right_offset": 0.0,
+              "slope_auto_rotation": false,
+              "one_way": false,
+              "surface_velocity_enabled": false,
+              "surface_velocity_x": 0.0,
+              "surface_normal_enabled": false,
+              "surface_normal_x": 0.0,
+              "surface_normal_y": -1.0,
+              "align_to_slope": false,
+              "align_to_slope_speed": 8.0,
+              "planet_enabled": false,
+              "planet_radius": 0.0,
+              "gravity_target_enabled": false,
+              "gravity_target_tag": "",
+              "gravity_strength": 1.0,
+              "gravity_influence_mult": 3.0,
+              "gravity_falloff": "Linear",
+              "gravity_all_sources": false,
+              "gravity_identity_enabled": false,
+              "gravity_identity": "",
+              "auto_align": false,
+              "auto_align_speed": 10.0,
+              "ignore_zoom": true,
+              "screen_space": true
+            },
+            "visible": {
+              "transform": true,
+              "physics": false,
+              "collision": false,
+              "slope": false,
+              "planetary": false,
+              "camera_space": false
+            }
+          },
+          {
+            "id": "player",
+            "name": "player",
+            "output_file": "src/scenes/main_scene.rs",
+            "visual_asset_mode": "None",
+            "visual_asset_path": "",
+            "visual_asset_fps": 12.0,
+            "visual_asset_use_canvas_cache": true,
+            "visual_asset_cache_key": "",
+            "visual_asset_size_aware_cache": true,
+            "template": "Rectangle",
+            "x": 400.0,
+            "y": 300.0,
+            "w": 0.0,
+            "h": 0.0,
+            "tags": [
+              "player"
+            ],
+            "layer": 2,
+            "color_rgb": [
+              255,
+              255,
+              255
+            ],
+            "enabled": true,
+            "lock_transform": false,
+            "is_background": false,
+            "spawn_only": false,
+            "advanced": {
+              "momentum_x": 0.0,
+              "momentum_y": 0.0,
+              "resistance_x": 0.0,
+              "resistance_y": 0.0,
+              "gravity": 0.0,
+              "rotation_deg": 0.0,
+              "pivot_x": 0.5,
+              "pivot_y": 0.5,
+              "material": {
+                "preset": "Default",
+                "elasticity": 0.0,
+                "friction": 0.5,
+                "density": 1.0
+              },
+              "collision_layer": 0,
+              "collision_mask": 0,
+              "slope_enabled": false,
+              "slope_left_offset": 0.0,
+              "slope_right_offset": 0.0,
+              "slope_auto_rotation": false,
+              "one_way": false,
+              "surface_velocity_enabled": false,
+              "surface_velocity_x": 0.0,
+              "surface_normal_enabled": false,
+              "surface_normal_x": 0.0,
+              "surface_normal_y": -1.0,
+              "align_to_slope": false,
+              "align_to_slope_speed": 8.0,
+              "planet_enabled": false,
+              "planet_radius": 0.0,
+              "gravity_target_enabled": false,
+              "gravity_target_tag": "",
+              "gravity_strength": 1.0,
+              "gravity_influence_mult": 3.0,
+              "gravity_falloff": "Linear",
+              "gravity_all_sources": false,
+              "gravity_identity_enabled": false,
+              "gravity_identity": "",
+              "auto_align": false,
+              "auto_align_speed": 10.0,
+              "ignore_zoom": false,
+              "screen_space": false
+            },
+            "visible": {
+              "transform": true,
+              "physics": false,
+              "collision": false,
+              "slope": false,
+              "planetary": false,
+              "camera_space": false
+            }
+          }
+        ],
+        "logic_trees": [
+          {
+            "id": "logic_0003",
+            "name": "update_script_3_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "nodes": [
+              {
+                "Action": {
+                  "Expr": {
+                    "raw": "if ! game_over { let spawn_timer = canvas . get_f32 (\"spawn_timer\") + DT ; if spawn_timer >= SPAWN_INTERVAL { canvas . set_var (\"spawn_timer\" , 0.0f32) ; spawn_asteroid (canvas) ; } else { canvas . set_var (\"spawn_timer\" , spawn_timer) ; } }"
+                  }
+                }
+              },
+              {
+                "Action": {
+                  "Expr": {
+                    "raw": "if ! game_over { let thrusting = canvas . is_key_held (& Key :: Character ('w' . to_string ())) || canvas . is_key_held (& Key :: Named (NamedKey :: ArrowUp)) ; if thrusting { let angle = canvas . get_f32 (\"player_angle\") . to_radians () ; let mx = angle . sin () * PLAYER_THRUST ; let my = - angle . cos () * PLAYER_THRUST ; canvas . run (Action :: ApplyMomentum { target : Target :: name (\"player\") , value : (mx , my) , }) ; } }"
+                  }
+                }
+              },
+              {
+                "Action": {
+                  "Expr": {
+                    "raw": "canvas . set_var (\"bullet_cooldown\" , cooldown)"
+                  }
+                }
+              },
+              {
+                "Action": {
+                  "Expr": {
+                    "raw": "if ! game_over && cooldown <= 0.0 && canvas . is_key_held (& Key :: Named (NamedKey :: Space)) { canvas . set_var (\"bullet_cooldown\" , 0.17f32) ; fire_bullet (canvas) ; }"
+                  }
+                }
+              },
+              {
+                "Action": {
+                  "Expr": {
+                    "raw": "if ! game_over { wrap_player (canvas) ; resolve_bullet_asteroid_hits (canvas) ; cleanup_offscreen_projectiles (canvas) ; }"
+                  }
+                }
+              },
+              {
+                "Action": {
+                  "Expr": {
+                    "raw": "refresh_hud (canvas)"
+                  }
+                }
+              }
+            ],
+            "referenced_object_ids": []
+          }
+        ],
+        "events": [
+          {
+            "id": "event_0013",
+            "name": "event_binding_13_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "kind": {
+              "KeyHold": {
+                "key": "Space",
+                "modifiers": {
+                  "shift": false,
+                  "control": false,
+                  "alt": false,
+                  "meta": false
+                }
+              }
+            },
+            "listener_target": {
+              "Name": "player"
+            },
+            "action_target": {
+              "Name": "player"
+            },
+            "action": {
+              "Conditional": {
+                "condition": {
+                  "Expr": {
+                    "raw": "Condition :: Not (Box :: new (Condition :: VarExists (\"game_over_true\" . into ())))"
+                  }
+                },
+                "if_true": {
+                  "Expr": {
+                    "raw": "Action :: Multi (vec ! [Action :: AddRotation { target : Target :: name (\"player\") , value : - PLAYER_TURN_SPEED , } , Action :: ModVar { name : \"player_angle\" . into () , op : MathOp :: Sub , operand : Expr :: f32 (PLAYER_TURN_SPEED) , } ,])"
+                  }
+                },
+                "if_false": null
+              }
+            },
+            "linked_logic_tree_id": null,
+            "referenced_object_ids": [
+              "player"
+            ]
+          },
+          {
+            "id": "event_0014",
+            "name": "event_binding_14_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "kind": {
+              "KeyHold": {
+                "key": "Named",
+                "modifiers": {
+                  "shift": false,
+                  "control": false,
+                  "alt": false,
+                  "meta": false
+                }
+              }
+            },
+            "listener_target": {
+              "Name": "player"
+            },
+            "action_target": {
+              "Name": "player"
+            },
+            "action": {
+              "Conditional": {
+                "condition": {
+                  "Expr": {
+                    "raw": "Condition :: Not (Box :: new (Condition :: VarExists (\"game_over_true\" . into ())))"
+                  }
+                },
+                "if_true": {
+                  "Expr": {
+                    "raw": "Action :: Multi (vec ! [Action :: AddRotation { target : Target :: name (\"player\") , value : - PLAYER_TURN_SPEED , } , Action :: ModVar { name : \"player_angle\" . into () , op : MathOp :: Sub , operand : Expr :: f32 (PLAYER_TURN_SPEED) , } ,])"
+                  }
+                },
+                "if_false": null
+              }
+            },
+            "linked_logic_tree_id": null,
+            "referenced_object_ids": [
+              "player"
+            ]
+          },
+          {
+            "id": "event_0015",
+            "name": "event_binding_15_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "kind": {
+              "KeyHold": {
+                "key": "Space",
+                "modifiers": {
+                  "shift": false,
+                  "control": false,
+                  "alt": false,
+                  "meta": false
+                }
+              }
+            },
+            "listener_target": {
+              "Name": "player"
+            },
+            "action_target": {
+              "Name": "player"
+            },
+            "action": {
+              "Conditional": {
+                "condition": {
+                  "Expr": {
+                    "raw": "Condition :: Not (Box :: new (Condition :: VarExists (\"game_over_true\" . into ())))"
+                  }
+                },
+                "if_true": {
+                  "Expr": {
+                    "raw": "Action :: Multi (vec ! [Action :: AddRotation { target : Target :: name (\"player\") , value : PLAYER_TURN_SPEED , } , Action :: ModVar { name : \"player_angle\" . into () , op : MathOp :: Add , operand : Expr :: f32 (PLAYER_TURN_SPEED) , } ,])"
+                  }
+                },
+                "if_false": null
+              }
+            },
+            "linked_logic_tree_id": null,
+            "referenced_object_ids": [
+              "player"
+            ]
+          },
+          {
+            "id": "event_0016",
+            "name": "event_binding_16_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "kind": {
+              "KeyHold": {
+                "key": "Named",
+                "modifiers": {
+                  "shift": false,
+                  "control": false,
+                  "alt": false,
+                  "meta": false
+                }
+              }
+            },
+            "listener_target": {
+              "Name": "player"
+            },
+            "action_target": {
+              "Name": "player"
+            },
+            "action": {
+              "Conditional": {
+                "condition": {
+                  "Expr": {
+                    "raw": "Condition :: Not (Box :: new (Condition :: VarExists (\"game_over_true\" . into ())))"
+                  }
+                },
+                "if_true": {
+                  "Expr": {
+                    "raw": "Action :: Multi (vec ! [Action :: AddRotation { target : Target :: name (\"player\") , value : PLAYER_TURN_SPEED , } , Action :: ModVar { name : \"player_angle\" . into () , op : MathOp :: Add , operand : Expr :: f32 (PLAYER_TURN_SPEED) , } ,])"
+                  }
+                },
+                "if_false": null
+              }
+            },
+            "linked_logic_tree_id": null,
+            "referenced_object_ids": [
+              "player"
+            ]
+          },
+          {
+            "id": "event_0017",
+            "name": "event_binding_17_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "kind": "Collision",
+            "listener_target": {
+              "Name": "player"
+            },
+            "action_target": {
+              "Tag": "asteroid"
+            },
+            "action": {
+              "Conditional": {
+                "condition": {
+                  "Expr": {
+                    "raw": "Condition :: Not (Box :: new (Condition :: VarExists (\"game_over_true\" . into ())))"
+                  }
+                },
+                "if_true": {
+                  "Expr": {
+                    "raw": "Action :: Multi (vec ! [Action :: ModVar { name : \"lives\" . into () , op : MathOp :: Sub , operand : Expr :: i32 (1) , } , Action :: CameraShake { intensity : 16.0 , duration : 0.35 , } , Action :: SetTint { target : Target :: name (\"player\") , color : Color (255 , 120 , 120 , 220) , } , Action :: Conditional { condition : Expr :: var (\"lives\") . lte (Expr :: i32 (0)) , if_true : Box :: new (Action :: Multi (vec ! [Action :: SetVar { name : \"game_over_true\" . into () , value : Expr :: bool (true) , } , Action :: Show { target : Target :: name (\"game_over_overlay\") , } , Action :: Hide { target : Target :: name (\"player\") , } , Action :: CameraFlash { color : Color (255 , 60 , 60 , 180) , duration : 0.45 , } ,])) , if_false : None , } ,])"
+                  }
+                },
+                "if_false": null
+              }
+            },
+            "linked_logic_tree_id": null,
+            "referenced_object_ids": [
+              "player"
+            ]
+          },
+          {
+            "id": "event_0018",
+            "name": "event_binding_18_imported",
+            "output_file": "src/scenes/main_scene.rs",
+            "kind": {
+              "KeyPress": {
+                "key": "Space",
+                "modifiers": {
+                  "shift": false,
+                  "control": false,
+                  "alt": false,
+                  "meta": false
+                }
+              }
+            },
+            "listener_target": {
+              "Name": "player"
+            },
+            "action_target": {
+              "Name": "player"
+            },
+            "action": {
+              "Conditional": {
+                "condition": {
+                  "Expr": {
+                    "raw": "Condition :: VarExists (\"game_over_true\" . into ())"
+                  }
+                },
+                "if_true": {
+                  "Expr": {
+                    "raw": "Action :: Custom { name : \"do_restart\" . into () , }"
+                  }
+                },
+                "if_false": null
+              }
+            },
+            "linked_logic_tree_id": null,
+            "referenced_object_ids": [
+              "player"
+            ]
+          }
+        ],
+        "custom_code_blocks": [
+          {
+            "id": "code_defaults_constants",
+            "name": "constants",
+            "kind": "Constants",
+            "output_file": "src/constants.rs",
+            "code": "",
+            "custom_event_name": ""
+          },
+          {
+            "id": "code_defaults_game_state",
+            "name": "game_state",
+            "kind": "GameStateVars",
+            "output_file": "src/game_state.rs",
+            "code": "",
+            "custom_event_name": ""
+          },
+          {
+            "id": "constants",
+            "name": "constants",
+            "kind": "Constants",
+            "output_file": "src/scenes/main_scene.rs",
+            "code": "const VW : f32 = 3840.0 ;\nconst VH : f32 = 2160.0 ;\nconst PLAYER_SIZE : f32 = 48.0 ;\nconst PLAYER_THRUST : f32 = 5.2 ;\nconst PLAYER_TURN_SPEED : f32 = 3.0 ;\nconst PLAYER_DRAG : f32 = 0.985 ;\nconst BULLET_SPEED : f32 = 420.0 ;\nconst BULLET_SIZE : f32 = 14.0 ;\nconst ASTEROID_MIN : f32 = 52.0 ;\nconst ASTEROID_MAX : f32 = 92.0 ;\nconst ASTEROID_SPEED_MIN : f32 = 60.0 ;\nconst ASTEROID_SPEED_MAX : f32 = 130.0 ;\nconst SPAWN_INTERVAL : f32 = 1.4 ;\nconst LIVES_START : i32 = 3 ;\nconst LAYER_PLAYER : u32 = 1 ;\nconst LAYER_ASTEROID : u32 = 2 ;\nconst LAYER_BULLET : u32 = 4 ;\nconst FONT_BYTES : & [u8] = include_bytes ! (\"../../assets/font.ttf\") ;",
+            "custom_event_name": ""
+          },
+          {
+            "id": "game_state",
+            "name": "game_state",
+            "kind": "GameStateVars",
+            "output_file": "src/scenes/main_scene.rs",
+            "code": "canvas . set_var (\"score\" , 0i32) ;\ncanvas . set_var (\"lives\" , LIVES_START) ;\ncanvas . set_var (\"spawn_timer\" , 0.0f32) ;\ncanvas . set_var (\"bullet_cooldown\" , 0.0f32) ;\ncanvas . set_var (\"player_angle\" , 0.0f32) ;\ncanvas . set_var (\"bullet_seq\" , 0i32) ;\ncanvas . set_var (\"asteroid_seq\" , 0i32) ;",
+            "custom_event_name": ""
+          }
+        ],
+        "view_bookmarks": [
+          {
+            "id": "bookmark_home",
+            "name": "Home Background Cell",
+            "pan_x": 0.0,
+            "pan_y": 0.0,
+            "zoom": 1.0
+          }
+        ]
+      }
+    ],
+    "scripts": [],
+    "plugins": [],
+    "crystalline_enabled": true
+  },
+  "files": [
+    {
+      "rel_path": ".gitignore",
+      "content_hash": 6976292133931133919
+    },
+    {
+      "rel_path": "Cargo.toml",
+      "content_hash": 1217769177335077817
+    },
+    {
+      "rel_path": "src/lib.rs",
+      "content_hash": 10891479999692370898
+    },
+    {
+      "rel_path": "src/main.rs",
+      "content_hash": 3000689394563114677
+    },
+    {
+      "rel_path": "src/scenes/main_scene.rs",
+      "content_hash": 1951121223830018678
+    },
+    {
+      "rel_path": "src/scripts/main_scene_scene.rs",
+      "content_hash": 3932633861678339031
+    }
+  ]
+}
